@@ -1,0 +1,56 @@
+body {
+    background: url(book.png) no-repeat center  fixed;
+    background-color: rgb(63, 41, 11);
+    
+   
+    background-size: cover;
+}
+.projekt {
+    position:absolute;
+    background:rgba(0, 34, 122, 0.58);
+    top: 100px;
+    left: 55%;
+    width: 400px;
+    height: 750px;
+    border-radius: 64px;
+}
+.visning {
+    position:absolute;
+    background:rgba(0, 34, 122, 0.58);
+    top: 100px;
+    left: 28%;
+    width: 400px;
+    height: 750px;
+    border-radius: 64px;
+}
+p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3vw;
+    line-height: 7vw;
+    
+    /* or 194% */
+    text-align: center;
+    color: white;
+    
+}
+
+@media only screen and (max-width: 1920px)  {
+    .projekt, .visning{
+        width: 20%;
+    height: 65%;
+    }
+
+}
+@media only screen and (max-width: 700px)  {
+
+    body{
+      background:url(book1.jpg)no-repeat center  fixed;
+    
+   
+      background-size: cover;
+    }
+
+    
+}

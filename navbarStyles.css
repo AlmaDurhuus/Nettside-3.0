@@ -66,6 +66,11 @@ a {
 }
 /*making it responsive*/
 @media only screen and (max-width: 738px) {
+  .nav-link{
+    font-size: 30px;
+    font-weight: 400;
+    color: #ffffff;
+  }
   .nav-menu {
       position: fixed;
       left: -100%;
@@ -78,6 +83,7 @@ a {
       transition: 0.3s;
       box-shadow:
           0 10px 27px rgba(0, 0, 0, 0.05);
+      
           
   }
   
@@ -107,5 +113,7 @@ a {
   }
 
 }
+
+.bold { font-weight: bolder; }
 
 

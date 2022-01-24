@@ -4,36 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="navbarStyles.css">
+    <title>Medier</title>
+    <link rel="stylesheet" href="../navbarStyles.css">
 </head>
 <body>
-
-    <!--navbar-->
+        <!--navbar-->
 
     <!--https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci-->
     <header class="header">
         <nav class="navbar">
-            <a href="index.html" class="nav-logo bold">Hjem</a>
+            <a href="../index.html" class="nav-logo">Hjem</a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="/programmering/programmering.html" class="nav-link">programmering</a>
+                    <a href="../programmering/programmering.html" class="nav-link">programmering</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/IT/IT.html" class="nav-link">IT</a>
+                    <a href="../IT/IT.html" class="nav-link">IT</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Medier/Medier.html" class="nav-link">Medier</a>
+                    <a href="Medier.html" class="nav-link bold">Medier</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Engelsk/Engelsk.html" class="nav-link">Engelsk</a>
+                    <a href="../Engelsk/Engelsk.html" class="nav-link">Engelsk</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Naturfag/Naturfag.html" class="nav-link">Naturfag</a>
+                    <a href="../Naturfag/Naturfag.html" class="nav-link">Naturfag</a>
                 </li>
                 <li class="nav-item">
-                    <a href="./Matte/Matte.html" class="nav-link">Matte</a>
+                    <a href="../Matte/Matte.html" class="nav-link">Matte</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -48,38 +46,31 @@
 
 
 
-    <div id="Text" class="Text">
-       <p>Velkommen til min nettside</p>
-    </div>
 
 
 
 
 
 
-    <script>
+
+     <script>
         const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-        const text = document.querySelector(".Text");
-        hamburger.addEventListener("click", mobileMenu,);
+const navMenu = document.querySelector(".nav-menu");
 
+hamburger.addEventListener("click", mobileMenu);
 
 function mobileMenu() {
-    
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-    if (text.style.visibility === "hidden" ) {
-        text.style.visibility = "visible"
-    } else { 
-        text.style.visibility = "hidden"
-    }
 }
 const navLink = document.querySelectorAll(".nav-link");
 
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 
-
-
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
 
         </script>
 </body>
