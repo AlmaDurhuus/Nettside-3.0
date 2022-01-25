@@ -67,8 +67,9 @@ a {
 /*making it responsive*/
 @media only screen and (max-width: 738px) {
   .nav-link{
-    font-size: 30px;
-    font-weight: 400;
+    font-size: 10vw;
+    line-height: 3vmin;
+   
     color: #ffffff;
   }
   .nav-menu {
