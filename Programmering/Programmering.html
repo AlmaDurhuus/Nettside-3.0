@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>programmering</title>
     <link rel="stylesheet" href="../navbarStyles.css">
+    <link rel="stylesheet" href="Programmering.css">
 </head>
 <body>
         <!--navbar-->
 
     <!--https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci-->
+
     <header class="header">
         <nav class="navbar">
             <a href="../index.html" class="nav-logo">Hjem</a>
@@ -42,36 +44,133 @@
         </nav>
 </header>
      <!--navbar-->
+     
+   
+
+<!--Parallax effect https://www.youtube.com/watch?v=1wfeqDyMUx4-->
+
+<section class="mouse_move">
+    <img src="planet1.png" id="planet1" 
+    class="mouse"
+        value="5">
+    <img src="planet2.png" id="planet2"
+    class="mouse"
+        value="7" >
+    <img src="planet3.png" id="planet3" 
+    class="mouse"
+        value="4">
+    <img src="stones.png" id="stones" 
+    class="mouse"
+        value="15">
+    <img src="back-ground.png" id="mountains_behind">
+    <h2 id="text">programmering</h2>
+    <img src="ground.png"  id="mountains_front">
+
+</section>
 
 
 
 
 
 
+    <div class="second-part">
+        <div class="projekter ">
+            <h1>projekter</h1>
+            <ul class="grid-container">
+                <li class="grid-item">
+                    <img src="./Icons/lego.png" alt="Lego icons created by Freepik - Flaticon" class="image">
+                    Legomindstorm
 
+                </li>
+         
+
+                <li class="grid-item">Første nettside</li>
+
+                <li class="grid-item">Powerapps</li>
+
+                <li class="grid-item">CSS grids</li>
+                
+                <li class="grid-item"   >Hangman</li>
+            </ul>
+        </div>
+        <div class="creation">
+            <h1>Figma og planlegning</h1>
+        </div>
+
+    </div>
 
 
 
 
      <script>
+            let planet1 = document.getElementById('planet1');
+            let planet2 = document.getElementById('planet2');
+            let planet3 = document.getElementById('planet3');
+            let stones = document.getElementById('stones');
+            let behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let front = document.getElementById('mountains_front');
+
+            window.addEventListener('scroll',function() {
+                let value=window.scrollY
+                planet1.style.top = value*1.1+'px';
+                planet1.style.left = value * 0.15 + 'px';
+                planet2.style.top = value*1.2+'px';
+                planet2.style.left = value*-0.15+'px';
+                planet3.style.top = value*1.1+'px'
+                behind.style.top = value*0.23+'px'
+                stones.style.left = value*0.1+'px';
+                stones.style.top = value*-0.3+'px';
+                text.style.marginRight = value * 4.3 + 'px';
+               text.style.marginTop = value * 0.3 + 'px';
+
+            })
+
+
+
+
         const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+        const navMenu = document.querySelector(".nav-menu");
+        hamburger.addEventListener("click", mobileMenu);
 
-hamburger.addEventListener("click", mobileMenu);
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll(".nav-link");
 
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-const navLink = document.querySelectorAll(".nav-link");
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
 
-navLink.forEach(n => n.addEventListener("click", closeMenu));
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
 
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
+
+
+
+
+
+     
 
         </script>
+
+  <!--https:;//www.geeksforgeeks.org/how-to-create-mousemove-parallax-effects-using-html-css-javascript/-->   
+<script type="text/javascript">
+
+    document.addEventListener("mousemove", parallax);
+    function parallax(event) {
+      this.querySelectorAll(".mouse").forEach((shift) => {
+        const position = shift.getAttribute("value");
+        const x = (window.innerWidth - event.pageX * position) / 90;
+        const y = (window.innerHeight - event.pageY * position) / 90;
+
+        shift.style.transform = `translateX(${x}px) translateY(${y}px)`;
+      });
+    }
+
+
+  </script>
+
 </body>
 </html>

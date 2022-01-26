@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap%27');
+*
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    overflow-x:hidden;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: url('Sky.png')no-repeat center fixed;
+    background-size: cover;
+}
+.header {
+    position: fixed ;
+    width: 100%;
+    /*z-index tells on which layer the image or object should be on.*/
+    z-index: 2000;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before
+{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    background: linear-gradient(to top,#000000, transparent);
+}
+
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+
+section img#planet1, #planet2, #planet3
+{
+    mix-blend-mode: screen;
+}
+
+section img#mountains_front
+{
+    z-index: 10;
+   
+}
+#text
+{
+    position: absolute;
+    right: -1100px;
+    white-space: nowrap;
+    font-size: 8vw;
+    z-index: 9;
+    color: #ffffffe8;
+    text-shadow: 2px 2px 21px #ff00b3;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.second-part {
+    height: 500px;
+    background: #1A233C;
+    color: white;
+    text-align: center;
+}
+
+.grid-container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px 10px;
+    justify-content: space-evenly;
+}
+
+.grid-item {
+    background: rgba(171, 143, 207, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 30vw;
+    height: 10vw;
+    overflow: hidden;
+    font-size: 3vw;
+    word-wrap:break-word;
+    border: 15px solid #888888;
+    box-sizing: border-box;
+    box-shadow: inset 4px 4px 73px #000000;
+
+}
+/*making it responsive*/
+@media only screen and (max-width: 738px) {
+
+    .grid-container{
+        display: flex;
+        flex-flow: column wrap;
+       align-items: center;
+        justify-content: space-evenly;
+    }
+    .grid-item {
+        background: rgba(171, 143, 207, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        width: 30%;
+       
+    }
+
+
+}
+
+.image {
+    width: 20%;
+}
+
+
+

@@ -20,6 +20,7 @@ a {
   align-items: center;
   padding: 1rem 1.5rem;
   background-color: rgba(0, 34, 122, 0.58); 
+
 }
 .hamburger {
   display: none;
@@ -39,6 +40,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+ 
 }
 
 .nav-item {
@@ -67,10 +69,8 @@ a {
 /*making it responsive*/
 @media only screen and (max-width: 738px) {
   .nav-link{
-    font-size: 10vw;
-    line-height: 3vmin;
-   
-    color: #ffffff;
+    font-size: 7vw;
+    line-height: 2vh;
   }
   .nav-menu {
       position: fixed;
