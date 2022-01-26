@@ -108,6 +108,7 @@ section img#mountains_front
     box-shadow: inset 4px 4px 73px #000000;
 
 }
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
 /*making it responsive*/
 @media only screen and (max-width: 738px) {
 
