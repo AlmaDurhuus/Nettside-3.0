@@ -7,12 +7,13 @@ body {
 }
 .projekt {
     position:absolute;
-    background:rgba(0, 34, 122, 0.58);
+   
     top: 100px;
     left: 55%;
     width: 300px;
     height: 550px;
     border-radius: 64px;
+    font-size: 1.5vw;
 }
 
 .dokument {
@@ -34,14 +35,20 @@ p {
     
     /* or 194% */
     text-align: center;
-    color: white;
+   color: black;
+   
     
+}
+
+li:hover {
+    color:red;
 }
 
 @media only screen and (max-width: 1500px)  {
     .projekt{
         width: 20%;
         height: 65%;
+     
     }
     .dokument{
        
@@ -53,6 +60,7 @@ p {
 @media only screen and (max-width: 1100px)  {
     .projekt {
     width: 25%;
+    font-size: 2vw;
    
     }
 
@@ -69,21 +77,22 @@ p {
         background:url(book1.jpg)no-repeat center  fixed;
         background-size: cover; 
     }
-
-    .dokument {
-        grid-area: doku;
-      }
-       
-      .projekt {
-        grid-area: proj;
-      }
-
-        .grid {
-            display: grid;
-            grid-template-areas: 
-            'proj'
-            'doku'
-            ;
+    .projekt {
+        position: absolute;
+        top: 60px;
+        width: auto;
+        left: 30%;
+        font-size: 2.3vw;
+        color: white;
+        }
+        p {
+            color: white;
         }
     
- }
+        .dokument {
+            position: absolute;
+            margin-top: 70px;
+            left: 30%;
+            width: 60%;
+        }
+}
