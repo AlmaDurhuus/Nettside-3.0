@@ -6,7 +6,6 @@
 
 body
 {
-    overflow-x:hidden;
     width: 100%;
     height: 100%;
     overflow-x: hidden;
@@ -52,6 +51,7 @@ section img
     height: 100%;
     object-fit: cover;
     pointer-events: none;
+    
 }
 
 
@@ -130,7 +130,7 @@ section img#mountains_front
 }
 
 .image {
-    width: 20%;
+    width: 100%;
 }
 
 

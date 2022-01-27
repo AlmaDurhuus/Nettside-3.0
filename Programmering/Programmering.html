@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>programmering</title>
-    <link rel="stylesheet" href="../navbarStyles.css">
     <link rel="stylesheet" href="Programmering.css">
+    <link rel="stylesheet" href="../navbarStyles.css">
 </head>
+
+
 <body>
-        <!--navbar-->
+ <!--navbar-->
 
     <!--https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci-->
 
@@ -18,7 +20,7 @@
             <a href="../index.html" class="nav-logo">Hjem</a>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="programmering.html" class="nav-link bold">programmering</a>
+                    <a href="Programmering.html" class="nav-link bold">programmering</a>
                 </li>
                 <li class="nav-item">
                     <a href="../IT/IT.html" class="nav-link">IT</a>
@@ -44,9 +46,8 @@
         </nav>
 </header>
      <!--navbar-->
-     
-   
 
+  
 <!--Parallax effect https://www.youtube.com/watch?v=1wfeqDyMUx4-->
 
 <section class="mouse_move">
@@ -128,30 +129,24 @@
 
 
 
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    hamburger.addEventListener("click", mobileMenu);
 
-        const hamburger = document.querySelector(".hamburger");
-        const navMenu = document.querySelector(".nav-menu");
-        hamburger.addEventListener("click", mobileMenu);
+    function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    }
+    const navLink = document.querySelectorAll(".nav-link");
 
-        function mobileMenu() {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        }
-        const navLink = document.querySelectorAll(".nav-link");
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
 
-        navLink.forEach(n => n.addEventListener("click", closeMenu));
+    function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
 
-        function closeMenu() {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }
-
-
-
-
-
-
-     
+   
 
         </script>
 
@@ -172,5 +167,5 @@
 
   </script>
 
-</body>
+
 </html>
