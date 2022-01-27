@@ -70,6 +70,15 @@
 
 </section>
 
+<div class="section2">
+  <img src="sky (2).png"  id="sky">
+  <img src="Tree.png"  id="tree">
+  <img src="water.png"  id="water">
+  
+ 
+
+</div>
+
 
 
 
@@ -150,6 +159,7 @@
             let behind = document.getElementById('mountains_behind');
             let text = document.getElementById('text');
             let front = document.getElementById('mountains_front');
+            let sky = document.getElementById('sky')
 
             window.addEventListener('scroll',function() {
                 let value=window.scrollY
@@ -162,7 +172,8 @@
                 stones.style.left = value*0.1+'px';
                 stones.style.top = value*-0.3+'px';
                 text.style.marginRight = value * 4.6 + 'px';
-               text.style.marginTop = value * 0.3 + 'px';
+                text.style.marginTop = value * 0.3 + 'px';
+                sky.style.top = value* -0.2 +'px';
 
             })
 
