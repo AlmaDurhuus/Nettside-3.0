@@ -45,47 +45,52 @@
         </nav>
 </header>
      <!--navbar-->
+<div class="everything">
+    
+    <div class="note">
+        <p>1853</p>
+    </div>
 
-<div class="button-grid"> 
+    <div class="button-grid"> 
 
-    <button class="padlock" value="1" id="button1" onclick="rememberNumbers(this.value)"> 
-        <p>1</p>
-    </button>
-    <button class="padlock" value="2" id="button2" onclick="rememberNumbers(this.value)"> 
-        <p>2</p>
-    </button>
-    <button class="padlock" value="3" id="button3" onclick="rememberNumbers(this.value)"> 
-        <p>3</p>
-    </button>
-    <button class="padlock" value="4" id="button4" onclick="rememberNumbers(this.value)"> 
-        <p>4</p>
-    </button>
-    <button class="padlock" value="5" id="button5" onclick="rememberNumbers(this.value)"> 
-        <p>5</p>
-    </button>
-    <button class="padlock" value="6" id="button6" onclick="rememberNumbers(this.value)"> 
-        <p>6</p>
-    </button>
-    <button class="padlock" value="7" id="button7" onclick="rememberNumbers(this.value)"> 
-        <p>7</p>
-    </button>
-    <button class="padlock" value="8" id="button8" onclick="rememberNumbers(this.value)"> 
-        <p>8</p>
-    </button>
-    <button class="padlock" value="9" id="button9" onclick="rememberNumbers(this.value)"> 
-        <p>9</p>
-    </button>
-    <button class="padlock" id="resetButton" onclick="reset()"> 
-        <p>reset</p>
-    </button>
-    <button class="padlock" value="0" id="button0" onclick="rememberNumbers(this.value)"> 
-        <p>0</p>
-    </button>
-    <div class="imposter">
-    <a href="ITyoumadeit.html" id="buttonGreenX" class="buttonGreen"> correct </a>
+        <button class="padlock" value="1" id="button1" onclick="rememberNumbers(this.value)"> 
+            <p>1</p>
+        </button>
+        <button class="padlock" value="2" id="button2" onclick="rememberNumbers(this.value)"> 
+            <p>2</p>
+        </button>
+        <button class="padlock" value="3" id="button3" onclick="rememberNumbers(this.value)"> 
+            <p>3</p>
+        </button>
+        <button class="padlock" value="4" id="button4" onclick="rememberNumbers(this.value)"> 
+            <p>4</p>
+        </button>
+        <button class="padlock" value="5" id="button5" onclick="rememberNumbers(this.value)"> 
+            <p>5</p>
+        </button>
+        <button class="padlock" value="6" id="button6" onclick="rememberNumbers(this.value)"> 
+            <p>6</p>
+        </button>
+        <button class="padlock" value="7" id="button7" onclick="rememberNumbers(this.value)"> 
+            <p>7</p>
+        </button>
+        <button class="padlock" value="8" id="button8" onclick="rememberNumbers(this.value)"> 
+            <p>8</p>
+        </button>
+        <button class="padlock" value="9" id="button9" onclick="rememberNumbers(this.value)"> 
+            <p>9</p>
+        </button>
+        <button class="padlock" id="resetButton" onclick="reset()"> 
+            <p>reset</p>
+        </button>
+        <button class="padlock" value="0" id="button0" onclick="rememberNumbers(this.value)"> 
+            <p>0</p>
+        </button>
+        <div class="imposter">
+        <a href="ITyoumadeit.html" id="buttonGreenX" class="buttonGreen"> correct </a>
+        </div>
     </div>
 </div>
-
 
 
 <script>
@@ -99,7 +104,7 @@
         selectedNumbers += buttonValue;
         console.log(selectedNumbers)
 
-        if (selectedNumbers == "1234") {
+        if (selectedNumbers == "1853") {
             console.log("omg you did it");
             console.log(buttonGreen.style.visibility);
             buttonGreen.style.visibility = "visible"
